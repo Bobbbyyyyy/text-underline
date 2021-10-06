@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap');
+
+body {
+    font-family: 'Open Sans';
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+a {
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    position: relative
+}
+a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: white;
+    border-radius: 9999px;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out;
+}
+a:hover::after {
+    transform: scaleX(1);
+}
